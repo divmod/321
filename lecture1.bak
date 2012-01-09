@@ -1,0 +1,12 @@
+#lang plai
+
+(define-type GUI
+  [label (text string?)]
+  [button (text string?)
+          (enabled? boolean?)]
+  [choice (items (listof string?))
+          (selected integer?)])
+
+(define (read-screen a-gui)
+  (type-case GUI a-gui
+    [label (text) "something"]))
